@@ -1,2 +1,3 @@
 # ada-angular-part1
-This repo contains my exercices for the Angular module
+
+[WIP] This repo contains my exercises for the Angular module.

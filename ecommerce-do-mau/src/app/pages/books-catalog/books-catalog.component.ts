@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { IBook } from '../../models/book.interface';
@@ -6,7 +6,7 @@ import { IBook } from '../../models/book.interface';
 @Component({
   selector: 'app-books-catalog',
   standalone: true,
-  imports: [MatCardModule, NgFor],
+  imports: [MatCardModule, NgFor, NgIf],
   templateUrl: './books-catalog.component.html',
   styleUrl: './books-catalog.component.css'
 })

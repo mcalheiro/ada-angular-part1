@@ -1,20 +1,27 @@
-<mat-card *ngFor="let book of booksList">
-    <mat-card-header>
-      <mat-card-title>{{book.title}}</mat-card-title>
-      <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        {{book.description}}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>COMPRAR</button>
-      <button mat-button>FAVORITAR</button>
-    </mat-card-actions>
+<!-- <div *ngIf="booksList.length; else emptyList">
+  <mat-card *ngFor="let book of booksList">
+      <mat-card-header>
+        <mat-card-title>{{book.title}}</mat-card-title>
+        <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{book.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>COMPRAR</button>
+        <button mat-button>FAVORITAR</button>
+      </mat-card-actions>
   </mat-card>
-  
-<!-- @for(book of booksList; track book.id){
+</div>
+
+<ng-template #emptyList>
+  Não temos livros no estoque :(
+</ng-template> -->
+
+
+@for(book of booksList; track book.id){
   <mat-card>
     <mat-card-header>
       <mat-card-title>{{book.title}}</mat-card-title>
@@ -30,4 +37,7 @@
       <button mat-button>FAVORITAR</button>
     </mat-card-actions>
   </mat-card>
-} -->
+  
+} @empty {
+  Não temos livros no estoque :(
+}
